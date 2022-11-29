@@ -19,10 +19,9 @@ jobs:
     - name: install latest rust
       uses: actions-rs/toolchain@v1
       with:
-          toolchain: stable
-          target: x86_64-unknown-linux-gnu
-          override: true
-          components: rustfmt, clippy
+        profile: minimal
+        toolchain: stable
+        components: rustfmt, clippy
     - name: run cargo fmt
       working-directory: ./ayaya_native
       run: |
